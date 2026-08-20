@@ -19,3 +19,6 @@ h1 i,h2 i,h3 i{font-family:Georgia,serif}
 .section{scroll-margin-top:70px}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:850px){.section,.hero{padding-top:88px;padding-bottom:72px}.hero{padding-top:130px;min-height:830px}.hero h1{font-size:clamp(46px,12vw,70px)}.section-head{margin-bottom:30px}.metric-strip strong{font-size:34px}.lab-panel{padding:20px}.lab-controls button{flex:1 1 46%}.lab-controls .reset{flex-basis:100%}}
+
+/* Removed source pages: 2, 6, 7, and 10. */
+#process,#applications,#midp,#lifecycle{display:none}

@@ -25,7 +25,7 @@ function App() {
   const [labStage, setLabStage] = useState(0); const [quake, setQuake] = useState(false); const [brick, setBrick] = useState(false); const [appIndex, setAppIndex] = useState(0);
   const [tonnes, setTonnes] = useState(100);
   const emissions = useMemo(() => ({ opc: tonnes * 875, bio: tonnes * 125 }), [tonnes]);
-  const nav = [['SCIENCE', 'science'], ['SIMULATOR', 'simulator'], ['CARBON', 'carbon'], ['APPLICATIONS', 'applications'], ['BIO-BRICK', 'bio-brick'], ['VERDICT', 'verdict']];
+  const nav = [['SCIENCE', 'science'], ['SIMULATOR', 'simulator'], ['CARBON', 'carbon'], ['BIO-BRICK', 'bio-brick'], ['VERDICT', 'verdict']];
   const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   return <div className={presentation ? 'app presentation' : 'app'}>
     <header className="nav"><a className="brand" href="#top"><span className="brand-mark">✦</span><span>MICP <em>LAB</em></span></a><button className="mobile-menu" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button><nav className={menu ? 'open' : ''}>{nav.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setMenu(false)}>{label}</a>)}<button className="mode" onClick={() => setPresentation(!presentation)}>{presentation ? 'EXIT MODE' : 'PRESENTATION MODE'}</button></nav></header>
